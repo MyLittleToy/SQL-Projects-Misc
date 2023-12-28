@@ -43,6 +43,7 @@ CREATE DATABASE West_Midland_Crime
 --  QUESTION 1
   
   --Distribution of Crimes by Location:
+  
     SELECT location, COUNT(*) AS crime_count
     FROM CombinedCrimeData
     GROUP BY location
@@ -65,6 +66,7 @@ CREATE DATABASE West_Midland_Crime
 -- QUESTION 2
 
 --Most Common Type of Crime
+
     SELECT crime_type, COUNT(*) AS crime_count
     FROM CombinedCrimeData
     GROUP BY crime_type
@@ -91,6 +93,7 @@ CREATE DATABASE West_Midland_Crime
 -- QUESTION 3:
 
 --Geographical Hotspots for Specific Crimes:
+
     USE		West_Midlands_Crime
     
     SELECT top 10 location, crime_type, COUNT(*) AS crime_count 
@@ -117,7 +120,8 @@ CREATE DATABASE West_Midland_Crime
 -- QUESTION 4:   
 
 --Outcomes of Reported Crimes:
-    use West_Midlands_Crime
+
+    Use West_Midlands_Crime
     
     SELECT last_outcome_category, COUNT(*) AS outcome_count
     FROM CombinedCrimeData
@@ -143,6 +147,7 @@ CREATE DATABASE West_Midland_Crime
 -- QUESTION 5:
 
 --Correlation Between Crime Type and Outcome:
+
     USE West_Midlands_Crime
     
     SELECT TOP 10 crime_type, Last_outcome_category, COUNT(*) AS outcome_count
