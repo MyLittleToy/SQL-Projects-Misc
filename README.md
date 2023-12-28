@@ -195,9 +195,10 @@ SELECT
     crime_type, 
     COUNT(*) AS crime_count
 FROM CombinedCrimeData
-    WHERE crime_type = 'Anti-Social behaviour'
-    GROUP BY month, crime_type
-    ORDER BY month;
+WHERE crime_type = 'Anti-Social behaviour'
+GROUP BY month, crime_type
+ORDER BY month;
+
     month                                              crime_type                                         crime_count
     -------------------------------------------------- -------------------------------------------------- -----------
     2023-03                                            Anti-social behaviour                              1455
@@ -212,9 +213,9 @@ SELECT
     crime_type, 
     COUNT(*) AS crime_count
 FROM CombinedCrimeData
-    WHERE crime_type = 'Burglary'
-    GROUP BY month, crime_type
-    ORDER BY month;
+WHERE crime_type = 'Burglary'    
+GROUP BY month, crime_type
+ORDER BY month;
 
     month                                              crime_type                                         crime_count
     -------------------------------------------------- -------------------------------------------------- -----------
@@ -232,9 +233,9 @@ SELECT
     crime_type, 
     COUNT(*) AS crime_count
 FROM CombinedCrimeData
-    WHERE crime_type = 'Drugs'
-    GROUP BY month, crime_type
-    ORDER BY month;
+WHERE crime_type = 'Drugs'
+GROUP BY month, crime_type
+ORDER BY month;
 
     month                                              crime_type                                         crime_count
     -------------------------------------------------- -------------------------------------------------- -----------
@@ -251,9 +252,9 @@ SELECT
     crime_type, 
     COUNT(*) AS crime_count
 FROM CombinedCrimeData
-    WHERE crime_type = 'Violence and sexual offences'
-    GROUP BY month, crime_type
-    ORDER BY month;
+WHERE crime_type = 'Violence and sexual offences'
+GROUP BY month, crime_type
+ORDER BY month;
 
     month                                              crime_type                                         crime_count
     -------------------------------------------------- -------------------------------------------------- -----------
@@ -269,9 +270,9 @@ SELECT
     crime_type, 
     COUNT(*) AS crime_count
 FROM CombinedCrimeData
-    WHERE crime_type = 'Vehicle crime'
-    GROUP BY month, crime_type
-    ORDER BY month;
+WHERE crime_type = 'Vehicle crime'
+GROUP BY month, crime_type
+ORDER BY month;
 
     month                                              crime_type                                         crime_count
     -------------------------------------------------- -------------------------------------------------- -----------
