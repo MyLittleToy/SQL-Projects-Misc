@@ -171,7 +171,10 @@ CREATE DATABASE West_Midland_Crime
 -- QUESTION 6:
 --Identifying Time Trends in Specific Crime Types: 
 
-    SELECT month, crime_type, COUNT(*) AS crime_count
+    SELECT 
+        month, 
+        crime_type, 
+        COUNT(*) AS crime_count
     FROM CombinedCrimeData
     WHERE crime_type = 'Criminal damage and arson'
     GROUP BY month, crime_type
@@ -187,8 +190,11 @@ CREATE DATABASE West_Midland_Crime
     2023-08                                            Criminal damage and arson                          2270
     
 
-SELECT month, crime_type, COUNT(*) AS crime_count
-    FROM CombinedCrimeData
+SELECT 
+    month, 
+    crime_type, 
+    COUNT(*) AS crime_count
+FROM CombinedCrimeData
     WHERE crime_type = 'Anti-Social behaviour'
     GROUP BY month, crime_type
     ORDER BY month;
@@ -201,8 +207,11 @@ SELECT month, crime_type, COUNT(*) AS crime_count
     2023-07                                            Anti-social behaviour                              2479
     2023-08                                            Anti-social behaviour                              2891
     
-SELECT month, crime_type, COUNT(*) AS crime_count
-    FROM CombinedCrimeData
+SELECT 
+    month, 
+    crime_type, 
+    COUNT(*) AS crime_count
+FROM CombinedCrimeData
     WHERE crime_type = 'Burglary'
     GROUP BY month, crime_type
     ORDER BY month;
@@ -218,8 +227,11 @@ SELECT month, crime_type, COUNT(*) AS crime_count
     
     
 
-SELECT month, crime_type, COUNT(*) AS crime_count
-    FROM CombinedCrimeData
+SELECT 
+    month, 
+    crime_type, 
+    COUNT(*) AS crime_count
+FROM CombinedCrimeData
     WHERE crime_type = 'Drugs'
     GROUP BY month, crime_type
     ORDER BY month;
@@ -234,8 +246,11 @@ SELECT month, crime_type, COUNT(*) AS crime_count
     2023-08                                            Drugs                                              640
     
 
-SELECT month, crime_type, COUNT(*) AS crime_count
-    FROM CombinedCrimeData
+SELECT 
+    month, 
+    crime_type, 
+    COUNT(*) AS crime_count
+FROM CombinedCrimeData
     WHERE crime_type = 'Violence and sexual offences'
     GROUP BY month, crime_type
     ORDER BY month;
@@ -249,8 +264,11 @@ SELECT month, crime_type, COUNT(*) AS crime_count
     2023-07                                            Violence and sexual offences                       12781
     2023-08                                            Violence and sexual offences                       11497
     
-SELECT month, crime_type, COUNT(*) AS crime_count
-    FROM CombinedCrimeData
+SELECT 
+    month, 
+    crime_type, 
+    COUNT(*) AS crime_count
+FROM CombinedCrimeData
     WHERE crime_type = 'Vehicle crime'
     GROUP BY month, crime_type
     ORDER BY month;
