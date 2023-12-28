@@ -1,17 +1,17 @@
 # SQL-Projects-Misc
 
-Dataset:
+Dataset: WM Crime Data
 
-Tools:
+Tools: MySQL, Power Bi
 
-STEP 1:
+**STEP 1:**
 --Create database and upload my dataset (Obtained from Office of National Statistics - https://www.ons.gov.uk/).  
-The dataset included separate tables for each month.  Due to the size of each .csv file, I decided to only look at the past 6 months (Mar-Aug)
-to analyse as part of this project.
+-- The dataset included separate tables for each month.  Due to the size of each .csv file, I decided to only look at the past 6 months (Mar-Aug)
+-- to analyse as part of this project.
 
-    SQL query used - CREATE DATABASE West_Midland_Crime
+CREATE DATABASE West_Midland_Crime
 
-STEP 2:
+**STEP 2:**
 --Utilised 'Union All' to combine all the tables into one table to store the combined data
 
     USE West_Midlands_Crime
@@ -30,17 +30,17 @@ STEP 2:
     SELECT * FROM dbo.[2023-08-west-midlands-street];
 
 
-STEP 3:
-Questions I will be answering using SQL:
-  1. Most popular locations where crime is committed across the region
-  2. Most Common Type of Crime
-  3. Geographical Hotspots for Specific Crimes
-  4. Outcomes of reported crimes
-  5. Correlation Between Crime Type and Outcome
-  6. Analysis of how specific crimes trend over time
+**STEP 3:**
+-- Questions I will be answering using SQL:
+--  1. Most popular locations where crime is committed across the region
+--  2. Most Common Type of Crime
+--  3. Geographical Hotspots for Specific Crimes
+--  4. Outcomes of reported crimes
+--  5. Correlation Between Crime Type and Outcome
+--  6. Analysis of how specific crimes trend over time
 
 
-  QUESTION 1
+--  QUESTION 1
   
   --Distribution of Crimes by Location:
     SELECT location, COUNT(*) AS crime_count
@@ -62,7 +62,7 @@ Questions I will be answering using SQL:
     On or near New Street                              631
 
 
-QUESTION 2
+-- QUESTION 2
 
 --Most Common Type of Crime
     SELECT crime_type, COUNT(*) AS crime_count
@@ -88,7 +88,7 @@ QUESTION 2
     Bicycle theft                                      1143
     
 
-QUESTION 3:
+-- QUESTION 3:
 
 --Geographical Hotspots for Specific Crimes:
     USE		West_Midlands_Crime
@@ -114,7 +114,7 @@ QUESTION 3:
     On or near Shopping Area                           Violence and sexual offences                       791
     
 
-QUESTION 4:   
+-- QUESTION 4:   
 
 --Outcomes of Reported Crimes:
     use West_Midlands_Crime
@@ -140,7 +140,7 @@ QUESTION 4:
     Investigation complete; no suspect identified                                                                                                                                                                                                                    53475
     
  
-QUESTION 5:
+-- QUESTION 5:
 
 --Correlation Between Crime Type and Outcome:
     USE West_Midlands_Crime
@@ -163,8 +163,9 @@ QUESTION 5:
     Burglary                                           Investigation complete; no suspect identified      5032 
     Shoplifting                                        Investigation complete; no suspect identified      4550
 
-QUESTION 6:
---Identifing Time Trends in Specific Crime Types: 
+-- QUESTION 6:
+--Identifying Time Trends in Specific Crime Types: 
+
     SELECT month, crime_type, COUNT(*) AS crime_count
     FROM CombinedCrimeData
     WHERE crime_type = 'Criminal damage and arson'
